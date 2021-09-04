@@ -17,7 +17,11 @@
 	}, 1000 / 90);
 </script>
 
-<main style="width: {frame.width}px; height: {frame.height}px" class="game">
+<main
+	style="width: {frame.width}px; height: {frame.height}px"
+	class:sunset-sky={frame.score >= 5}
+	class:night-sky={frame.score >= 10}
+>
 	<section id="score">{frame.score}</section>
 	<Bird bird={frame.bird} />
 	<Pipe pipe={frame.firstPipe} />
@@ -40,9 +44,26 @@
 		position: relative;
 		border: 1px solid black;
 		overflow: hidden;
-		background-color: lightblue;
+		background-color: lightskyblue;
 		margin: auto;
 	}
+
+	.sunset-sky {
+		position: relative;
+		border: 1px solid black;
+		overflow: hidden;
+		background: linear-gradient(#e65d02, #edd661);
+		margin: auto;
+	}
+
+	.night-sky {
+		position: relative;
+		border: 1px solid black;
+		overflow: hidden;
+		background: linear-gradient(#0036ab, #2d8de0);
+		margin: auto;
+	}
+
 	#ground {
 		background-color: brown;
 		position: absolute;

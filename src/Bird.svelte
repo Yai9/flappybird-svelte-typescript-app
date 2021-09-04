@@ -11,7 +11,7 @@
 <style>
 	.bird {
 		border: 1px solid black;
-		background-color: orange;
+		background: linear-gradient(#b53c3c, #c75252);
 		position: absolute;
 	}
 </style>

@@ -8,19 +8,23 @@
 		style="left: {pipe.left}px; top: {pipe.topPipe
 			.top}px; width: {pipe.width}px; height: {pipe.topPipe
 			.height}px;"
-		class="top-pipe pipe"
+		class="top-pipe"
 	/>
 	<section
 		style="left: {pipe.left}px; top: {pipe.bottomPipe
 			.top}px; width: {pipe.width}px; height: {pipe.bottomPipe
 			.height}px;"
-		class="top-bottom pipe"
+		class="bottom-pipe"
 	/>
 {/if}
 
 <style>
-	.pipe {
+	.top-pipe {
 		position: absolute;
-		background-color: palegreen;
+		background: linear-gradient(#3cb566, #49e680);
+	}
+	.bottom-pipe {
+		position: absolute;
+		background: linear-gradient(#49e680, #3cb566);
 	}
 </style>
